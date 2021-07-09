@@ -30,8 +30,9 @@ jobs:
    #   uses: GabrielBB/xvfb-action@v1
     #  with:
    #     run: npm test
+
     - name: 'Tar files'
-    run: tar -cvfz my_files.tar.gz .
+      run: tar -cvfz my_files.tar.gz .
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
@@ -53,7 +54,7 @@ jobs:
         name: node-app
 
     - name: 'UnTar files'
-    run: tar -xzvf my_files.tar 
+      run: tar -xzvf my_files.tar 
 
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
