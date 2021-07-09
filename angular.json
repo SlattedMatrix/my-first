@@ -19,7 +19,7 @@
             "outputPath": "dist/angular-basic",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "1lyfills": "src/polyfills.ts",
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
