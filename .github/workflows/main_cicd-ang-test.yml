@@ -34,7 +34,7 @@ jobs:
     - name: 'Tar files'
       run: |
         touch archive.tar.gz
-        tar --exclude=archive.tar.gz archive.tar.gz .
+        tar --exclude=archive.tar.gz -czf archive.tar.gz .
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
