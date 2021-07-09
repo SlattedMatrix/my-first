@@ -32,5 +32,7 @@ jobs:
     - name: 'Run Azure webapp deploy action using publish profile credentials'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: node-rn
+        app-name: 'cicd-ang-test'
+        slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_086e7ecf5962487e9104ce34c5043f21 }}
+        package: .
