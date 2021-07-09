@@ -32,7 +32,9 @@ jobs:
    #     run: npm test
 
     - name: 'Tar files'
-      run: tar -czf my_files.tar.gz .
+      run: |
+        touch archive.tar.gz
+        tar --exclude=archive.tar.gz archive.tar.gz .
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
@@ -54,7 +56,7 @@ jobs:
         name: node-app
 
     - name: 'UnTar files'
-      run: tar -xzf my_files.tar 
+      run: tar -xzf archive.tar.gz 
 
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
